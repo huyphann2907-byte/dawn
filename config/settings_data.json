@@ -6,63 +6,63 @@
       "color_schemes": {
         "scheme-1": {
           "settings": {
-            "background": "#FFFFFF",
+            "background": "#EDE7DA",
             "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#FFFFFF",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
+            "text": "#171614",
+            "button": "#171614",
+            "button_label": "#EDE7DA",
+            "secondary_button_label": "#171614",
+            "shadow": "#171614"
           }
         },
         "scheme-2": {
           "settings": {
-            "background": "#F3F3F3",
+            "background": "#EDE7DA",
             "background_gradient": "",
-            "text": "#121212",
-            "button": "#121212",
-            "button_label": "#F3F3F3",
-            "secondary_button_label": "#121212",
-            "shadow": "#121212"
+            "text": "#171614",
+            "button": "#171614",
+            "button_label": "#EDE7DA",
+            "secondary_button_label": "#171614",
+            "shadow": "#171614"
           }
         },
         "scheme-3": {
           "settings": {
-            "background": "#242833",
+            "background": "#171614",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#000000",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#EDE7DA",
+            "button": "#EDE7DA",
+            "button_label": "#171614",
+            "secondary_button_label": "#EDE7DA",
+            "shadow": "#171614"
           }
         },
         "scheme-4": {
           "settings": {
-            "background": "#121212",
+            "background": "#171614",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#121212",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#EDE7DA",
+            "button": "#EDE7DA",
+            "button_label": "#171614",
+            "secondary_button_label": "#EDE7DA",
+            "shadow": "#171614"
           }
         },
         "scheme-5": {
           "settings": {
-            "background": "#334FB4",
+            "background": "#565645",
             "background_gradient": "",
-            "text": "#FFFFFF",
-            "button": "#FFFFFF",
-            "button_label": "#334FB4",
-            "secondary_button_label": "#FFFFFF",
-            "shadow": "#121212"
+            "text": "#EDE7DA",
+            "button": "#EDE7DA",
+            "button_label": "#565645",
+            "secondary_button_label": "#EDE7DA",
+            "shadow": "#171614"
           }
         }
       },
-      "type_header_font": "assistant_n4",
+      "type_header_font": "inter_n6",
       "heading_scale": 100,
-      "type_body_font": "assistant_n4",
+      "type_body_font": "inter_n4",
       "body_scale": 100,
       "page_width": 1200,
       "spacing_sections": 0,
@@ -79,7 +79,7 @@
       "buttons_shadow_blur": 5,
       "variant_pills_border_thickness": 1,
       "variant_pills_border_opacity": 55,
-      "variant_pills_radius": 40,
+      "variant_pills_radius": 0,
       "variant_pills_shadow_opacity": 0,
       "variant_pills_shadow_horizontal_offset": 0,
       "variant_pills_shadow_vertical_offset": 4,
@@ -95,8 +95,8 @@
       "card_image_padding": 0,
       "card_text_alignment": "left",
       "card_color_scheme": "scheme-2",
-      "card_border_thickness": 0,
-      "card_border_opacity": 10,
+      "card_border_thickness": 1,
+      "card_border_opacity": 20,
       "card_corner_radius": 0,
       "card_shadow_opacity": 0,
       "card_shadow_horizontal_offset": 0,
@@ -106,8 +106,8 @@
       "collection_card_image_padding": 0,
       "collection_card_text_alignment": "left",
       "collection_card_color_scheme": "scheme-2",
-      "collection_card_border_thickness": 0,
-      "collection_card_border_opacity": 10,
+      "collection_card_border_thickness": 1,
+      "collection_card_border_opacity": 20,
       "collection_card_corner_radius": 0,
       "collection_card_shadow_opacity": 0,
       "collection_card_shadow_horizontal_offset": 0,
@@ -152,9 +152,9 @@
       "drawer_shadow_vertical_offset": 4,
       "drawer_shadow_blur": 5,
       "badge_position": "bottom left",
-      "badge_corner_radius": 40,
-      "sale_badge_color_scheme": "scheme-4",
-      "sold_out_badge_color_scheme": "scheme-3",
+      "badge_corner_radius": 0,
+      "sale_badge_color_scheme": "scheme-5",
+      "sold_out_badge_color_scheme": "scheme-4",
       "brand_headline": "",
       "brand_description": "<p></p>",
       "brand_image_width": 100,

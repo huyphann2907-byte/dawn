@@ -1,0 +1,147 @@
+/* ============================================================
+   Ashworn — brand token layer (loaded after base.css)
+
+   Palette : Ink / Bone / Stone / Moss  (Rust reserved, unused)
+   Type    : Inter — one family, differentiated by weight/case/tracking
+   Shape   : square edges, 1px Stone hairlines, no shadows
+
+   This layer expresses only what the theme settings cannot:
+   the case/tracking type system, the Moss CTA-hover accent,
+   Stone hairlines, and on-brand placeholder colouring.
+   ============================================================ */
+
+:root {
+  --brand-ink: 23, 22, 20; /* #171614 */
+  --brand-bone: 237, 231, 218; /* #EDE7DA */
+  --brand-stone: 168, 161, 150; /* #A8A196 */
+  --brand-moss: 86, 86, 69; /* #565645 */
+  /* --brand-rust: 122, 70, 50;  reserved for a future season — do not use with Moss */
+
+  --brand-hairline: rgba(var(--brand-stone), 1);
+}
+
+/* ---- Body: neutral tracking, comfortable measure ---- */
+body,
+.text-body {
+  letter-spacing: 0;
+}
+
+/* ---- Section headings (H1 / H2 / hero): uppercase, tracked, semibold ---- */
+h1,
+h2,
+.h0,
+.h1,
+.h2,
+.hxl,
+.hxxl {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hxxl,
+.hxl,
+.h0,
+h1,
+.h1 {
+  /* H1 hero — roughly +5% tracking */
+  letter-spacing: calc(var(--font-heading-scale) * 0.24rem);
+}
+
+h2,
+.h2 {
+  /* H2 section — roughly +4% tracking */
+  letter-spacing: calc(var(--font-heading-scale) * 0.16rem);
+}
+
+/* ---- Product / card names (H3–H5): sentence case, medium, flat tracking ---- */
+h3,
+h4,
+h5,
+.h3,
+.h4,
+.h5,
+.card__heading,
+.card-information .card__heading {
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+/* ---- Captions / labels / size chart: uppercase, wide tracking ---- */
+.caption-with-letter-spacing {
+  letter-spacing: 0.18rem; /* ~+6% */
+  font-weight: 500;
+}
+
+/* ---- Buttons / CTAs: uppercase label with tracking ---- */
+.button,
+.button-label,
+.shopify-challenge__button,
+.customer button,
+button.shopify-payment-button__button--unbranded {
+  text-transform: uppercase;
+  letter-spacing: 0.14rem;
+  font-weight: 500;
+}
+
+/* ---- Moss accent on primary CTA hover ---- */
+.button:not(.button--secondary):not(.button--tertiary):not([disabled]):hover,
+.shopify-challenge__button:not([disabled]):hover,
+.customer button:not([disabled]):hover {
+  background-color: rgb(var(--brand-moss));
+  color: rgb(var(--brand-bone));
+  transition: background-color var(--duration-short) ease, color var(--duration-short) ease,
+    box-shadow var(--duration-short) ease;
+}
+
+/* ---- Hairline dividers: 1px Stone ---- */
+.header-wrapper--border-bottom {
+  border-bottom: 1px solid var(--brand-hairline);
+}
+
+/* ---- Placeholder media: Stone-on-Bone, never default grey ---- */
+.placeholder-svg {
+  background-color: rgb(var(--brand-bone));
+  fill: rgba(var(--brand-stone), 0.85);
+  color: rgba(var(--brand-stone), 0.85);
+}
+
+.placeholder {
+  background-color: rgba(var(--brand-ink), 0.03);
+  color: rgba(var(--brand-stone), 0.9);
+  fill: rgba(var(--brand-stone), 0.9);
+}
+
+/* ---- Text wordmark (header/footer fallback when no logo image is set) ---- */
+.ashworn-wordmark {
+  display: inline-block;
+  font-family: var(--font-heading-family);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em; /* +8% per brand spec */
+  line-height: 1;
+  color: currentColor;
+  /* minimum clear space around the wordmark = height of the "A" */
+  padding: 0.08em;
+}
+
+.ashworn-wordmark--header {
+  font-size: 2.2rem;
+}
+
+@media screen and (min-width: 990px) {
+  .ashworn-wordmark--header {
+    font-size: 2.4rem;
+  }
+}
+
+/* ---- Eyebrow / kicker label (small uppercase lead-in above headings) ---- */
+.ashworn-eyebrow {
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18rem;
+  color: rgba(var(--color-foreground), 0.7);
+  margin-bottom: 1.2rem;
+}
