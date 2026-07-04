@@ -144,6 +144,67 @@ button.shopify-payment-button__button--unbranded {
   text-decoration: none;
 }
 
+/* ---- PDP size guide (custom_liquid block) ---- */
+.ashworn-size-guide {
+  display: block;
+  border-top: 1px solid var(--brand-hairline);
+  margin-top: 1.5rem;
+}
+
+.ashworn-size-guide__details summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ashworn-size-guide__details summary::-webkit-details-marker {
+  display: none;
+}
+
+.ashworn-size-guide__details summary::after {
+  content: '+';
+  font-size: 1.8rem;
+  line-height: 1;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.ashworn-size-guide__details[open] summary::after {
+  content: '\2013'; /* en dash */
+}
+
+.ashworn-size-guide__content {
+  padding-bottom: 2rem;
+}
+
+.ashworn-size-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+}
+
+.ashworn-size-table th,
+.ashworn-size-table td {
+  text-align: left;
+  padding: 0.9rem 0.6rem;
+  border-bottom: 1px solid var(--brand-hairline);
+  font-size: 1.4rem;
+}
+
+.ashworn-size-table th {
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.ashworn-size-note {
+  font-size: 1.3rem;
+  color: rgba(var(--color-foreground), 0.7);
+}
+
 /* ---- Eyebrow / kicker label (small uppercase lead-in above headings) ---- */
 .ashworn-eyebrow {
   display: inline-block;
