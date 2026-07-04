@@ -1,21 +1,252 @@
 {
   "sections": {
-    "image_banner": {
+    "hero": {
       "type": "image-banner",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Browse our latest products",
+            "heading": "Get dressed once",
             "heading_size": "h0"
           }
         },
-        "button": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Heavyweight basics on one silhouette. Decide your uniform once — then stop thinking about it.",
+            "text_style": "body"
+          }
+        },
+        "buttons": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Shop all",
+            "button_label_1": "Build Your Uniform",
             "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": true,
+            "button_style_secondary_1": false,
+            "button_label_2": "See The Fit",
+            "button_link_2": "shopify://collections/all",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "buttons"
+      ],
+      "settings": {
+        "image_overlay_opacity": 0,
+        "image_height": "large",
+        "desktop_content_position": "middle-left",
+        "show_text_box": false,
+        "image_behavior": "none",
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "mobile_content_alignment": "left",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "philosophy": {
+      "type": "rich-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "The Uniform Philosophy",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "A closet full of clothes, nothing to wear",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You don't need more options. You need a few pieces that fit right, look right, and work together every time. We make one silhouette, cut the same across every piece — so putting an outfit together stops being a decision.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Build Your Uniform",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "caption",
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Build your uniform",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "swipe_on_mobile": false,
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "padding_top": 64,
+        "padding_bottom": 96
+      }
+    },
+    "material": {
+      "type": "image-with-text",
+      "blocks": {
+        "caption": {
+          "type": "caption",
+          "settings": {
+            "caption": "Construction",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "French Terry, 340gsm",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Structured, heavyweight, and built to hold its shape. A raw-cut hem and dropped shoulder give it the weight you feel the moment you put it on — a statement piece, not a layer you forget you're wearing.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "caption",
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "height": "large",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "image_behavior": "none",
+        "content_layout": "no-overlap",
+        "desktop_content_position": "middle",
+        "desktop_content_alignment": "left",
+        "mobile_content_alignment": "left",
+        "section_color_scheme": "scheme-1",
+        "color_scheme": "scheme-1",
+        "padding_top": 24,
+        "padding_bottom": 96
+      }
+    },
+    "assurances": {
+      "type": "multicolumn",
+      "blocks": {
+        "col1": {
+          "type": "column",
+          "settings": {
+            "title": "One silhouette",
+            "text": "<p>Every piece is cut to the same boxy, drop-shoulder proportions. They layer together because they're built to.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "col2": {
+          "type": "column",
+          "settings": {
+            "title": "Sized right, every time",
+            "text": "<p>The same measured fit across every order. What you bought last time is what arrives this time.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "col3": {
+          "type": "column",
+          "settings": {
+            "title": "Dispatched in two days",
+            "text": "<p>Orders leave within two business days — so you're never left guessing where your package is.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "col1",
+        "col2",
+        "col3"
+      ],
+      "settings": {
+        "title": "Why it works",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "closing": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Build your uniform",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Start with the tank. Add as you go. It all works together.</p>"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Build Your Uniform",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -24,52 +255,25 @@
       },
       "block_order": [
         "heading",
+        "text",
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "image_behavior": "none",
-        "desktop_content_alignment": "center",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-3",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
-      }
-    },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "title": "Featured products",
-        "heading_size": "h2",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "swipe_on_mobile": false,
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "padding_top": 44,
-        "padding_bottom": 36
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 96
       }
     }
   },
   "order": [
-    "image_banner",
-    "featured_collection"
+    "hero",
+    "philosophy",
+    "featured_collection",
+    "material",
+    "assurances",
+    "closing"
   ]
 }
