@@ -1,0 +1,155 @@
+{
+  "sections": {
+    "about_intro": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class='page-width ashworn-page-hero'><span class='ashworn-eyebrow ashworn-eyebrow--moss'>The Uniform Philosophy</span><h1 class='ashworn-page-hero__title'>Stop reinventing your closet every morning.</h1></div>",
+        "color_scheme": "scheme-1",
+        "padding_top": 96,
+        "padding_bottom": 32
+      }
+    },
+    "about_problem": {
+      "type": "rich-text",
+      "blocks": {
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>You already own an aesthetic. Elevated basics, heavyweight fabric, nothing shouting for attention.</p><p>What you don't have is a system — a set of pieces you trust enough to stop thinking about.</p><p>Instead: a closet full of options and the same question every morning. What actually fits. What actually holds up wash after wash.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    },
+    "about_guide": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Fewer pieces. Not more choices.",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ashworn isn't built to give you more to pick from. It's built around one silhouette, used consistently across every piece — so sizing doesn't shift between orders, and fit doesn't become a guessing game.</p><p>That consistency is the product. Not a slogan on a shirt.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "scheme-1",
+        "full_width": false,
+        "padding_top": 24,
+        "padding_bottom": 72
+      }
+    },
+    "about_how": {
+      "type": "multicolumn",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "<p>Start with the piece — the boxy tank, heavyweight French Terry, cut oversized on purpose.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "<p>Build the uniform — add the pieces cut from the same proportions, made to sit together without a second thought.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "image": "",
+            "title": "",
+            "text": "<p>Buy again without thinking — same fit, every time.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3"
+      ],
+      "settings": {
+        "title": "How it works",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    },
+    "about_cta": {
+      "type": "rich-text",
+      "blocks": {
+        "button": {
+          "type": "button",
+          "settings": {
+            "button_label": "Build Your Uniform",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "full_width": true,
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    }
+  },
+  "order": [
+    "about_intro",
+    "about_problem",
+    "about_guide",
+    "about_how",
+    "about_cta"
+  ]
+}

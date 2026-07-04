@@ -215,3 +215,15 @@ button.shopify-payment-button__button--unbranded {
   color: rgba(var(--color-foreground), 0.7);
   margin-bottom: 1.2rem;
 }
+
+.ashworn-eyebrow--moss {
+  color: rgb(var(--brand-moss));
+}
+
+/* ---- Page hero (About and other section-built pages) ---- */
+.ashworn-page-hero__title {
+  font-size: clamp(3.4rem, 5vw, 5.2rem);
+  line-height: 1.05;
+  max-width: 18ch;
+  margin: 0;
+}
