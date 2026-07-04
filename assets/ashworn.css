@@ -135,6 +135,15 @@ button.shopify-payment-button__button--unbranded {
   }
 }
 
+.ashworn-wordmark--footer {
+  font-size: 2.8rem;
+  margin-bottom: 1.6rem;
+}
+
+.footer__wordmark-link {
+  text-decoration: none;
+}
+
 /* ---- Eyebrow / kicker label (small uppercase lead-in above headings) ---- */
 .ashworn-eyebrow {
   display: inline-block;
