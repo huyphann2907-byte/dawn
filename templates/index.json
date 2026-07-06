@@ -44,7 +44,6 @@
         "buttons"
       ],
       "settings": {
-        "image": "shopify://shop_images/Character_wearing_tank_top_studio_202607052027.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "image_behavior": "none",
