@@ -27,6 +27,32 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+
+  {%- comment -%}
+    Contrast scrim: when the text sits directly on the image (no text box), lay a
+    low-opacity Ink gradient behind the copy so the headline + CTA stay readable
+    over any background image — independent of the overlay opacity above and of
+    whether the image happens to have a dark area in the right spot. Ink = #171614.
+    Gradient is aimed toward the content edge so it darkens where the text lives.
+  {%- endcomment -%}
+  {%- if section.settings.show_text_box == false -%}
+    {%- liquid
+      case section.settings.desktop_content_alignment
+        when 'right'
+          assign scrim_direction = 'to left'
+        when 'center'
+          assign scrim_direction = 'to top'
+        else
+          assign scrim_direction = 'to right'
+      endcase
+    -%}
+    #Banner-{{ section.id }} .banner__media::after {
+      background:
+        linear-gradient({{ scrim_direction }}, rgba(23, 22, 20, 0.55) 0%, rgba(23, 22, 20, 0.2) 42%, rgba(23, 22, 20, 0) 75%),
+        linear-gradient(to top, rgba(23, 22, 20, 0.3) 0%, rgba(23, 22, 20, 0) 50%);
+      opacity: 1;
+    }
+  {%- endif -%}
 {%- endstyle -%}
 
 {%- liquid
