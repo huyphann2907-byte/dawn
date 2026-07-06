@@ -99,8 +99,8 @@
         "button"
       ],
       "settings": {
-        "desktop_content_position": "left",
-        "content_alignment": "left",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
         "color_scheme": "scheme-1",
         "full_width": true,
         "padding_top": 96,
@@ -117,7 +117,7 @@
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "columns_desktop": 4,
+        "columns_desktop": 2,
         "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
