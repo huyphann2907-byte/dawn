@@ -1,0 +1,230 @@
+{%- style -%}
+  .testimonials-{{ section.id }} {
+    /* Ashworn palette tokens (see brand-docs/05-brand-guidelines.md) */
+    --ashworn-ink: #171614;
+    --ashworn-bone: #EDE7DA;
+    --ashworn-stone: #A8A196;
+    /* Light Stone tint — Stone mixed into Bone, breaks the run of Bone sections */
+    background-color: #d5cfc2;
+    background-color: color-mix(in srgb, var(--ashworn-stone) 35%, var(--ashworn-bone));
+    /* Hairline divider from the section above (brand rule: 1px Stone) */
+    border-top: 1px solid var(--ashworn-stone);
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  .testimonials-{{ section.id }} .testimonials__inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .testimonials-{{ section.id }} .testimonials__viewport {
+    display: grid;
+  }
+
+  .testimonials-{{ section.id }} .testimonial {
+    grid-area: 1 / 1;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease;
+  }
+
+  .testimonials-{{ section.id }} .testimonial.is-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .testimonials-{{ section.id }} .testimonial__quote {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.9rem;
+    line-height: 1.45;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ashworn-ink);
+  }
+
+  .testimonials-{{ section.id }} .testimonial__quote p {
+    margin: 0;
+  }
+
+  .testimonials-{{ section.id }} .testimonial__attribution {
+    display: block;
+    margin-top: 2rem;
+    font-weight: 500;
+    color: var(--ashworn-stone);
+  }
+
+  .testimonials-{{ section.id }} .testimonials__nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3.2rem;
+  }
+
+  .testimonials-{{ section.id }} .testimonials__dot {
+    width: 0.8rem;
+    height: 0.8rem;
+    padding: 0;
+    border: 1px solid var(--ashworn-stone);
+    border-radius: 0;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .testimonials-{{ section.id }} .testimonials__dot.is-active {
+    background: var(--ashworn-ink);
+    border-color: var(--ashworn-ink);
+  }
+
+  @media screen and (min-width: 750px) {
+    .testimonials-{{ section.id }} {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .testimonials-{{ section.id }} .testimonial__quote {
+      font-size: 2.3rem;
+    }
+  }
+{%- endstyle -%}
+
+<div class="testimonials-{{ section.id }} isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+  <div class="page-width">
+    <div class="testimonials__inner" data-testimonials="{{ section.id }}">
+      <div class="testimonials__viewport">
+        {%- for block in section.blocks -%}
+          <figure
+            class="testimonial{% if forloop.first %} is-active{% endif %}"
+            data-slide="{{ forloop.index0 }}"
+            {{ block.shopify_attributes }}
+          >
+            <blockquote class="testimonial__quote rte">
+              {{ block.settings.quote }}
+            </blockquote>
+            {%- if block.settings.attribution != blank -%}
+              <figcaption class="testimonial__attribution caption-with-letter-spacing caption-with-letter-spacing--medium">
+                {{ block.settings.attribution | escape }}
+              </figcaption>
+            {%- endif -%}
+          </figure>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.blocks.size > 1 -%}
+        <div class="testimonials__nav" role="tablist" aria-label="{{ 'sections.testimonials.name' | default: 'Testimonials' }}">
+          {%- for block in section.blocks -%}
+            <button
+              class="testimonials__dot{% if forloop.first %} is-active{% endif %}"
+              type="button"
+              role="tab"
+              data-dot="{{ forloop.index0 }}"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              aria-label="Testimonial {{ forloop.index }}"
+            ></button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{%- if section.blocks.size > 1 -%}
+  <script>
+    (function () {
+      var root = document.querySelector('[data-testimonials="{{ section.id }}"]');
+      if (!root) return;
+      var slides = root.querySelectorAll('.testimonial');
+      var dots = root.querySelectorAll('.testimonials__dot');
+      if (dots.length < 2) return;
+      dots.forEach(function (dot, i) {
+        dot.addEventListener('click', function () {
+          slides.forEach(function (s, j) {
+            s.classList.toggle('is-active', j === i);
+          });
+          dots.forEach(function (d, j) {
+            var active = j === i;
+            d.classList.toggle('is-active', active);
+            d.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+        });
+      });
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Social proof. Leave blocks with placeholder text until you have real customer quotes — do not enter invented quotes or names."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 96
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 96
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote",
+          "default": "<p>Add customer quote here.</p>"
+        },
+        {
+          "type": "text",
+          "id": "attribution",
+          "label": "Attribution",
+          "info": "Customer name and location, e.g. name — city.",
+          "default": "Add customer name, location"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Testimonials",
+      "blocks": [
+        {
+          "type": "testimonial"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

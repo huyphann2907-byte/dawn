@@ -234,6 +234,25 @@
         "padding_bottom": 80
       }
     },
+    "testimonials": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_1": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "<p>Add customer quote here.</p>",
+            "attribution": "Add customer name, location"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_1"
+      ],
+      "settings": {
+        "padding_top": 96,
+        "padding_bottom": 96
+      }
+    },
     "closing": {
       "type": "rich-text",
       "blocks": {
@@ -283,6 +302,7 @@
     "featured_collection",
     "material",
     "assurances",
+    "testimonials",
     "closing"
   ]
 }
